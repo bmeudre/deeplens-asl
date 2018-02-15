@@ -38,6 +38,8 @@ Be careful:
 Here is the ASL alphabet that you can use:
 ![ASL alphabet](images/asl-alphabet.png)
 
+Samples can be found in the [samples folder](samples/) (images were extracted from our dataset).
+
 ## How we made it
 
 The dataset was made with a specific Lambda function that runs on the DeepLens (see "Snapshot sub-project" below for more information).
