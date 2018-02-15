@@ -95,16 +95,16 @@ def greengrass_infinite_infer_run():
             	cv2.putText(output_frame, '{}: {:.2f}'.format(labels[top_k[0]["label"]], top_k[0]["prob"]), (0,20), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 165, 20), 4)
             
                 # Publishing results to IoT topic
-                msg = "{"
-    	        prob_num = 0
-            	for obj in top_k:
-                    if prob_num == topk-1:
-                    	msg += '"{}": {:.2f}'.format(labels[obj["label"]], obj["prob"])
-                    else:
-                    	msg += '"{}": {:.2f},'.format(labels[obj["label"]], obj["prob"])
-                    prob_num += 1
-            	msg += "}"
-            	client.publish(topic=iot_topic, payload=msg)
+                #msg = "{"
+    	        #prob_num = 0
+            	#for obj in top_k:
+                #    if prob_num == topk-1:
+                #    	msg += '"{}": {:.2f}'.format(labels[obj["label"]], obj["prob"])
+                #    else:
+                #    	msg += '"{}": {:.2f},'.format(labels[obj["label"]], obj["prob"])
+                #    prob_num += 1
+            	#msg += "}"
+            	#client.publish(topic=iot_topic, payload=msg)
             else:
                 # Handling whitespaces
                 if (actual_letter != ''):
